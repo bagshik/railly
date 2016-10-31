@@ -67,10 +67,10 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="input-group date" id="datetimepicker1">
-                                            <input type="text" class="form-control" placeholder="October 31, 2016 12:30 AM">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
+                                            <input type="text" class="form-control" placeholder="October 31, 2016 12:30 AM">
                                         </div>
                                     </div>
                                 </div>
