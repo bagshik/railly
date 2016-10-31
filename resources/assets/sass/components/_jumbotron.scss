@@ -1,0 +1,18 @@
+// Jumbotron
+
+.jumbotron {
+  padding: 12em 0 10em 0;
+  background: url('../img/jumbo.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  margin-top: -60px;
+
+  h1 {
+    font-weight: 400;
+    text-align: center;
+  }
+
+  form {
+    margin-top: 50px;
+  }
+}
