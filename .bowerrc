@@ -1,0 +1,7 @@
+{
+  "directory": "resources/assets/bower",
+  "ignoredDependencies": [
+    "jquery",
+    "moment"
+  ]
+}

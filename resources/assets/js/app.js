@@ -13,8 +13,36 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+/*
+var App = require('./App.vue');
+var Home = require('./components/Home.vue');
+var About = require('./components/About.vue');
+var Stations = require('./components/Stations.vue');
+*/
+
+import App from './App.vue';
+import Home from './components/Home.vue';
+import About from './components/About.vue';
+import Stations from './components/Stations.vue';
+
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+const routes = [
+  { path: '/home', alias: '/', component: Home },
+  { path: '/stations', component: Stations },
+  { path: '/about', component: About }
+];
+
+// Create the router instance and pass the `routes` option
+const router = new VueRouter({
+  routes,
+  linkActiveClass: 'active'
+});
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router,
+    render: h => h(App)
+    // put headers here!
 });
