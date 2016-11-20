@@ -110,8 +110,8 @@ export default {
           stations: '',
           selection: 'A',
           options: [
-              { text: 'I will be leaving on...', value: 'A' },
-              { text: 'I will be arriving on...', value: 'B' }
+              { text: 'I will be leaving on...', value: 'depart' },
+              { text: 'I will be arriving on...', value: 'arrive' }
           ]
       }
   },
