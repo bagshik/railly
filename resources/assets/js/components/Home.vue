@@ -80,14 +80,14 @@ export default {
         $('#fromStation').typeahead({
             source: self.stations['@graph'],
             afterSelect: function(item) {
-                console.log(item['@id']);
+                self.fromStation = item['@id'];
             }
         });
 
         $('#toStation').typeahead({
             source: self.stations['@graph'],
             afterSelect: function(item) {
-                console.log(item['@id']);
+                self.toStation = item['@id'];
             }
         });
         
@@ -108,7 +108,7 @@ export default {
           fromStation: '',
           toStation: '',
           stations: '',
-          selection: 'A',
+          selection: 'depart',
           options: [
               { text: 'I will be leaving on...', value: 'depart' },
               { text: 'I will be arriving on...', value: 'arrive' }
