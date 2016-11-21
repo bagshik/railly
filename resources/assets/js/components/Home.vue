@@ -87,14 +87,14 @@
                                         <td>{{ train.departure.station }}</td>
                                         <td>{{ train.departure.vehicle }}</td>
                                         <td>{{ train.departure.platform }}</td>
-                                        <td>{{ train.departure.delay }}</td>
+                                        <td>{{ formatDuration(train.departure.delay) }}</td>
                                     </tr>
                                     <tr>
                                         <td>{{ formatUnixTime(train.arrival.time) }}</td>
                                         <td>{{ train.arrival.station }}</td>
                                         <td>{{ train.arrival.vehicle }}</td>
                                         <td>{{ train.arrival.platform }}</td>
-                                        <td>{{ train.arrival.delay }}</td>
+                                        <td>{{ formatDuration(train.arrival.delay) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
