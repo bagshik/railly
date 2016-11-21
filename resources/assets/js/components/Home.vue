@@ -71,10 +71,10 @@
                                     <div class="pull-right">{{ formatDuration(train.duration) }} minutes</div>
                                 </h3>
                             </div>
-                            <table class="table">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Time</th>
+                                        <th>#</th>
                                         <th>Station</th>
                                         <th>Train</th>
                                         <th>Platform</th>
@@ -83,16 +83,16 @@
                                 </thead> 
                                 <tbody> 
                                     <tr>
-                                        <td>{{ formatUnixTime(train.departure.time) }}</td>
+                                        <td>1</td>
                                         <td>{{ train.departure.station }}</td>
-                                        <td>{{ train.departure.vehicle }}</td>
+                                        <td>{{ formatVehicle(train.departure.vehicle) }}</td>
                                         <td>{{ train.departure.platform }}</td>
                                         <td>{{ formatDuration(train.departure.delay) }}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{ formatUnixTime(train.arrival.time) }}</td>
+                                        <td>2</td>
                                         <td>{{ train.arrival.station }}</td>
-                                        <td>{{ train.arrival.vehicle }}</td>
+                                        <td>{{ formatVehicle(train.arrival.vehicle) }}</td>
                                         <td>{{ train.arrival.platform }}</td>
                                         <td>{{ formatDuration(train.arrival.delay) }}</td>
                                     </tr>
@@ -210,6 +210,9 @@ export default {
         },
         formatDuration(seconds) {
             return Math.ceil(seconds / 60);
+        },
+        formatVehicle(train) {
+            return train.replace('BE.NMBS.', '');
         }
     },
     components: {
