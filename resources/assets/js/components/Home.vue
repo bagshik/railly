@@ -117,12 +117,14 @@ export default {
     mounted() {
         let self = this;
 
-        self.$http.get('https://irail.be/stations/NMBS', {
+        self.$http.get('https://railly.herokuapp.com/data/stations.json', {
+            withCredentials: true,
             headers: {
                 Accept: 'application/json'
             }
         }).then((response) => {
-            self.stations = JSON.parse(response.data);
+            // JSON.parse(response.data);
+            self.stations = response.data;
 
             $('#fromStation').typeahead({
                 source: self.stations['@graph'],
